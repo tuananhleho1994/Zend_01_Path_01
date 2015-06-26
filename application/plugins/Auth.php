@@ -5,6 +5,7 @@
  * Date: 6/24/2015
  * Time: 4:34 PM
  */
+// http://devzone.zend.com/1692/zend-framework-mvc-request-lifecycle/
 
 class Application_Plugin_Auth extends Zend_Controller_Plugin_Abstract
 {
