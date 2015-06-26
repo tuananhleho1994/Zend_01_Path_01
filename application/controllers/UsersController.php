@@ -44,10 +44,18 @@ class UsersController extends Zend_Controller_Action {
 
     public function editAction() {
                     // action body
+        echo "action: edit";
+        sleep(10);
+        return $this->_redirect('users/delete');
     }
 
     public function deleteAction() {
                     // action body
+        echo "action: delete";
+        $arrParam = $this->_request->getParams();
+        echo "<pre>";
+        print_r($arrParam);
+        echo "</pre>";
     }
 
 }
