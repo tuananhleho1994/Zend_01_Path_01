@@ -1,0 +1,22 @@
+<div id="view-content">
+    <p>View script for controller <b>Users</b> and script/action name <b>index</b></p>
+    <table width='300' align='center' border='1'>
+        <tr>
+            <td>User Id</td>
+            <td>Username</td>
+        </tr>
+        <?php
+        foreach($this->paginator as $item)
+        {
+            echo "<tr>";
+            echo "<td align='center'>".$item['id']."</td>";
+            echo "<td align='center'>".$item['username']."</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+    <?php
+
+    echo $this->paginationControl($this->paginator, 'Sliding' , 'users/pagination.phtml');
+    ?>
+</div>

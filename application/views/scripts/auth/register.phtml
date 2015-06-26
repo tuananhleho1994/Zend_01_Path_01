@@ -1,0 +1,9 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Auth</b> and script/action name <b>register</b></p>
+        <?php 
+            $this->formRegister->setAction($this->url(array('controller'=>'auth','action'=>'register'),'default',true));
+            $this->formRegister->setMethod('post');
+            echo $this->formRegister;
+        ?>
+</div>

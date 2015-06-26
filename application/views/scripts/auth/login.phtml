@@ -1,0 +1,10 @@
+<br /><br />
+<div id="view-content">
+
+	<p>View script for controller <b>Auth</b> and script/action name <b>login</b></p>
+        <?php
+            $this->formLogin->setAction($this->url(array('controller'=>'auth','action'=>'login'),'default',true));
+            $this->formLogin->setMethod('post');
+            echo $this->formLogin;
+        ?>
+</div>

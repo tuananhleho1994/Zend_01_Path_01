@@ -1,0 +1,8 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Users</b> and script/action name <b>create</b></p>
+        <?php 
+                    $this->formCreateUser->setAction($this->url(array('controller'=>'users','action'=>'create'),'default',true));
+                    echo $this->formCreateUser;
+        ?>
+</div>

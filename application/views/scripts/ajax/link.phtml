@@ -1,0 +1,69 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: tuananhleho1994
+ * Date: 6/23/2015
+ * Time: 11:44 AM
+ */
+    echo $this->headScript();
+//    echo $this->base;
+?>
+<div id="result"></div>
+<a href="javascript:void(0)" id="1" class="clickMe">Link 1</a>
+<a href="javascript:void(0)" id="2" class="clickMe">Link 2</a>
+<a href="javascript:void(0)" id="3" class="clickMe">Link 3</a>
+<a href="javascript:void(0)" id="4" class="clickMe">Link 4</a>
+<script>
+    $(document).ready(function(){
+        $('.clickMe').click(function(){
+//            valueID = $(this).attr('id');
+//
+//
+//            var link = $.getJSON("<?php //echo $this->baseUrl(); ?>/ajax/get-link", {
+//                id: valueID
+//            });
+//
+//            link.done(function(result){
+//                console.log(result);
+//            })
+//
+//            link.done(function(result){
+//                console.log(result);
+//            })
+
+            var getA = $.getJSON("<?php echo $this->baseUrl(); ?>/ajax/number-one");
+            var getB = $.getJSON("<?php echo $this->baseUrl(); ?>/ajax/number-two");
+
+//            getA.then(function (result){
+//               getB.then(function(r){
+//                   alert(result.a+ r.a);
+//               });
+//            });
+
+//            getA.done(function(result){
+//               var a = result.a;
+//               getB.done(function(result){
+//                   var b = result.a;
+//                   $("#result").html(a+b);
+//               })
+//            });
+
+
+//            getA.done(function(result){
+//                console.log(result);
+//            });
+//            getB.done(function(result){
+//                console.log(result);
+//            });
+//            $.when(getA,getB).done(function( numberOne, numberTwo ) {
+//                total = parseInt(numberOne[0].a) + parseInt(numberTwo[0].a);
+//                $("#result").html(total);
+//            });
+
+
+
+
+
+        });
+    })
+</script>
