@@ -19,6 +19,21 @@ class Application_Plugin_Auth extends Zend_Controller_Plugin_Abstract
     {
         $this->getResponse()
             ->appendBody("<p>routeShutdown() called</p>\n");
+        $controllerName = $request->getControllerName();
+        $actionName = $request->getActionName();
+        $auth = Zend_Auth::getInstance();
+        if($auth->hasIdentity()){
+            echo "You are logined";
+        }else{
+//            $request->setModuleName('default');
+//            $request->setControllerName('users');
+//            $request->setActionName('delete');
+//            return;
+            if($controllerName != "users" && $actionName != "delete") {
+                $r = Zend_Controller_Action_HelperBroker::getStaticHelper('redirector');
+                $r->gotoSimple('delete', 'users', 'default')->redirectAndExit();
+            }
+        }
     }
 
     public function dispatchLoopStartup(
