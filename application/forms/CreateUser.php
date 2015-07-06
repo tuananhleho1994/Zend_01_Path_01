@@ -9,6 +9,8 @@
 class Application_Form_CreateUser extends Zend_Form
 {
           public function init(){
+                //$username = new Zend_Form_Element_Text('username');
+
                     $this->setMethod('post');
                     $this->addElement('text','username',array(
                               'label'   =>        'Username',
